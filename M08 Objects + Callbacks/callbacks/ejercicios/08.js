@@ -1,8 +1,14 @@
 const buscarElemento = (array, callback) => {
   // Busca un elemento en el array y retornalo.
-  // Si el elemento no se encuentra, devuelve el mensje "No se encontró el elemento".
+  // Si el elemento no se encuentra, devuelve el mensje c.
   // La función de callback es la encargada de evaluar si el elemento fue encontrado.
   // Tu código:
+  for (let i = 0; i < array.length; i++) {
+    // Llamamos al callback para evaluar si el elemento actual es el buscado
+    if (callback(array[i])) {
+      return array[i];
+    }
+  }
+  return "No se encontró el elemento";
 };
-
 module.exports = buscarElemento;
