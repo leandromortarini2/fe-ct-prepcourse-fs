@@ -8,10 +8,10 @@ function encontrarPrimerMultiploDeN(n, secuencia) {
   for (let i = 0; i < secuencia.length; i++) {
     if (secuencia[i] % n === 0) {
       multiplo = secuencia[i];
-      break;
+      return multiplo;
     }
   }
-  return multiplo;
+  return undefined;
 }
 
 module.exports = encontrarPrimerMultiploDeN;
